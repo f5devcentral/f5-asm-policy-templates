@@ -1,4 +1,6 @@
 # f5-asm-policy-template-v13
 ASM default generic policy templates for version 13.1
 
-These templates are the same ones which loaded with the version.
+These templates are the same as the built-in the included with the version.
+
+The Zip files are application policy template which is patched version of the built-in policies.
