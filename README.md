@@ -1,5 +1,5 @@
 # f5-asm-policy-template-v13
-ASM default generic policy templates for version 13.1
+The XML files are ASM default generic policy templates for version 13.1
 
 These templates are the same as the built-in the included with the version.
 
