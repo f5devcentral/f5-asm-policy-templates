@@ -1,2 +1,3 @@
 # f5-asm-policy-template-v13
-ASM Policy Ready Templates for Version 13.x 
+ASM default generic policy templates for version 13.x.
+These templates are the same ones which loaded with the version.
