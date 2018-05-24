@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policy integrity_check="6fc7964e0c8fb7d47a8a11f3737987ea" bigip_version="13.1.0" name="/Common/Sharepoint_2016_Template">
+<policy integrity_check="2ce4b3f25e2f25fe2f9576d3802a71e7" bigip_version="13.1.0" name="/Common/Sharepoint_2016_Template">
   <type>Security</type>
   <policy_version>
-    <timestamp>2018-05-23T07:57:36Z</timestamp>
+    <timestamp>2018-05-24T12:08:23Z</timestamp>
     <device_name>asm11.plab.f5.com</device_name>
     <policy_name>/Common/Sharepoint_2016_Template</policy_name>
-    <last_change>Parameter * [update]: Overridden Attack Signatures were set to &lt;![CDATA[ (Parameter) (2) (disabled on the parameter), SQL-INJ "SELECT COUNT()" (disabled on the parameter), LDAP injection attempt ( uid ) (disabled on the parameter), Generic Remote File/Path Include Attempt 4 (dir param, http/https) (disabled on the parameter). { audit: policy = /Common/Sharepoint_2016_Template, component = Policy Builder }</last_change>
+    <last_change>Allowed Response Code 423 [add]: Response Code was set to 423. { audit: policy = /Common/Sharepoint_2016_Template, username = admin, client IP = 192.168.188.33 }</last_change>
   </policy_version>
   <encoding>utf-8</encoding>
-  <description>Microsoft_Sharepoint_2016_Ready)Template_v_6.0, version 13.1.0.1
+  <description>Microsoft_Sharepoint_2016_Ready Template_v_6.1.2, version 13.1
 please check out DevCentral the latest and new templates, and leave your feedback: https://devcentral.f5.com/articles/new-big-ip-asm-v13101-sharepoint-2016-ready-template-30132</description>
   <case_insensitive>true</case_insensitive>
   <owa>false</owa>
@@ -603,34 +603,14 @@ please check out DevCentral the latest and new templates, and leave your feedbac
     <maximum_decoding_passes>5</maximum_decoding_passes>
     <maximum_headers>20</maximum_headers>
     <maximum_parameters>2000</maximum_parameters>
-    <response_page cause="default">
+    <response_page cause="Failed_login_honeypot">
       <response_type>default</response_type>
       <response_header>HTTP/1.1 200 OK
 Cache-Control: no-cache
 Pragma: no-cache
 Connection: close</response_header>
-      <response_html_code>&lt;html>&lt;head>&lt;title>Request Rejected&lt;/title>&lt;/head>&lt;body>The requested URL was rejected. Please consult with your administrator.&lt;br>&lt;br>Your support ID is: &lt;%TS.request.ID()%>&lt;br>&lt;br>&lt;a href='javascript:history.back();'>[Go Back]&lt;/a>&lt;/body>&lt;/html></response_html_code>
+      <response_html_code>&lt;html>&lt;head>&lt;title>Login Failed&lt;/title>&lt;/head>&lt;body>Username or password is incorrect. Please try to log in again.&lt;br>&lt;br>&lt;a href="javascript:history.back();">[Go Back]&lt;/a>&lt;/body>&lt;/html></response_html_code>
       <ajax_action_type>redirect</ajax_action_type>
-    </response_page>
-    <response_page cause="XML">
-      <response_type>soap fault</response_type>
-      <response_header>HTTP/1.1 200 OK
-Cache-Control: no-cache
-Pragma: no-cache
-Content-type: text/xml
-Connection: close</response_header>
-      <response_html_code>&lt;?xml version='1.0' encoding='utf-8'?>&lt;soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>&lt;soap:Body>&lt;soap:Fault>&lt;faultcode>soap:Client&lt;/faultcode>&lt;faultstring>The requested operation was rejected. Please consult with your administrator.Your support ID is: &lt;%TS.request.ID()%>&lt;/faultstring>&lt;detail/>&lt;/soap:Fault>&lt;/soap:Body>&lt;/soap:Envelope></response_html_code>
-      <ajax_action_type>redirect</ajax_action_type>
-    </response_page>
-    <response_page cause="Ajax">
-      <response_type>default</response_type>
-      <response_header>HTTP/1.1 200 OK
-Cache-Control: no-cache
-Pragma: no-cache
-Connection: close</response_header>
-      <response_html_code>&lt;html>&lt;head>&lt;title>Request Rejected&lt;/title>&lt;/head>&lt;body>The requested URL was rejected. Please consult with your administrator.&lt;br>&lt;br>Your support ID is: &lt;%TS.request.ID()%>&lt;br>&lt;br>&lt;a href='javascript:history.back();'>[Go Back]&lt;/a>&lt;/body>&lt;/html></response_html_code>
-      <ajax_action_type>alert_popup</ajax_action_type>
-      <ajax_popup_message>The requested URL was rejected. Please consult with your administrator. Your support ID is: &lt;%TS.request.ID()%></ajax_popup_message>
     </response_page>
     <response_page cause="Ajax_login">
       <response_type>default</response_type>
@@ -641,6 +621,16 @@ Connection: close</response_header>
       <response_html_code>&lt;html>&lt;head>&lt;title>Request Rejected&lt;/title>&lt;/head>&lt;body>The requested URL was rejected. Please consult with your administrator.&lt;br>&lt;br>Your support ID is: &lt;%TS.request.ID()%>&lt;br>&lt;br>&lt;a href='javascript:history.back();'>[Go Back]&lt;/a>&lt;/body>&lt;/html></response_html_code>
       <ajax_action_type>alert_popup</ajax_action_type>
       <ajax_popup_message>The requested URL was rejected. Please consult with your administrator. Your support ID is: &lt;%TS.request.ID()%></ajax_popup_message>
+    </response_page>
+    <response_page cause="XML">
+      <response_type>soap fault</response_type>
+      <response_header>HTTP/1.1 200 OK
+Cache-Control: no-cache
+Pragma: no-cache
+Content-type: text/xml
+Connection: close</response_header>
+      <response_html_code>&lt;?xml version='1.0' encoding='utf-8'?>&lt;soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>&lt;soap:Body>&lt;soap:Fault>&lt;faultcode>soap:Client&lt;/faultcode>&lt;faultstring>The requested operation was rejected. Please consult with your administrator.Your support ID is: &lt;%TS.request.ID()%>&lt;/faultstring>&lt;detail/>&lt;/soap:Fault>&lt;/soap:Body>&lt;/soap:Envelope></response_html_code>
+      <ajax_action_type>redirect</ajax_action_type>
     </response_page>
     <response_page cause="Hijack">
       <response_type>erase cookies</response_type>
@@ -664,14 +654,15 @@ Connection: close</response_header>
 }</response_html_code>
       <ajax_action_type>redirect</ajax_action_type>
     </response_page>
-    <response_page cause="Captcha">
+    <response_page cause="Ajax">
       <response_type>default</response_type>
       <response_header>HTTP/1.1 200 OK
 Cache-Control: no-cache
 Pragma: no-cache
-Content-type: text/html</response_header>
-      <response_html_code>This question is for testing whether you are a human visitor and to prevent automated spam submission.&lt;br>%ASM.captcha.image% %ASM.captcha.change%&lt;br>&lt;b>What code is in the image?&lt;/b>%ASM.captcha.solution%&lt;br>%ASM.captcha.submit%&lt;br>&lt;br>Your support ID is: %ASM.captcha.support_id%.</response_html_code>
-      <ajax_action_type>redirect</ajax_action_type>
+Connection: close</response_header>
+      <response_html_code>&lt;html>&lt;head>&lt;title>Request Rejected&lt;/title>&lt;/head>&lt;body>The requested URL was rejected. Please consult with your administrator.&lt;br>&lt;br>Your support ID is: &lt;%TS.request.ID()%>&lt;br>&lt;br>&lt;a href='javascript:history.back();'>[Go Back]&lt;/a>&lt;/body>&lt;/html></response_html_code>
+      <ajax_action_type>alert_popup</ajax_action_type>
+      <ajax_popup_message>The requested URL was rejected. Please consult with your administrator. Your support ID is: &lt;%TS.request.ID()%></ajax_popup_message>
     </response_page>
     <response_page cause="Captcha_fail">
       <response_type>default</response_type>
@@ -682,13 +673,22 @@ Content-type: text/html</response_header>
       <response_html_code>You have entered an invalid answer for the question. Please try again.&lt;br>%ASM.captcha.image% %ASM.captcha.change%&lt;br>&lt;b>What code is in the image?&lt;/b>%ASM.captcha.solution%&lt;br>%ASM.captcha.submit%&lt;br>&lt;br>Your support ID is: %ASM.captcha.support_id%.</response_html_code>
       <ajax_action_type>redirect</ajax_action_type>
     </response_page>
-    <response_page cause="Failed_login_honeypot">
+    <response_page cause="default">
       <response_type>default</response_type>
       <response_header>HTTP/1.1 200 OK
 Cache-Control: no-cache
 Pragma: no-cache
 Connection: close</response_header>
-      <response_html_code>&lt;html>&lt;head>&lt;title>Login Failed&lt;/title>&lt;/head>&lt;body>Username or password is incorrect. Please try to log in again.&lt;br>&lt;br>&lt;a href="javascript:history.back();">[Go Back]&lt;/a>&lt;/body>&lt;/html></response_html_code>
+      <response_html_code>&lt;html>&lt;head>&lt;title>Request Rejected&lt;/title>&lt;/head>&lt;body>The requested URL was rejected. Please consult with your administrator.&lt;br>&lt;br>Your support ID is: &lt;%TS.request.ID()%>&lt;br>&lt;br>&lt;a href='javascript:history.back();'>[Go Back]&lt;/a>&lt;/body>&lt;/html></response_html_code>
+      <ajax_action_type>redirect</ajax_action_type>
+    </response_page>
+    <response_page cause="Captcha">
+      <response_type>default</response_type>
+      <response_header>HTTP/1.1 200 OK
+Cache-Control: no-cache
+Pragma: no-cache
+Content-type: text/html</response_header>
+      <response_html_code>This question is for testing whether you are a human visitor and to prevent automated spam submission.&lt;br>%ASM.captcha.image% %ASM.captcha.change%&lt;br>&lt;b>What code is in the image?&lt;/b>%ASM.captcha.solution%&lt;br>%ASM.captcha.submit%&lt;br>&lt;br>Your support ID is: %ASM.captcha.support_id%.</response_html_code>
       <ajax_action_type>redirect</ajax_action_type>
     </response_page>
     <response_page cause="Failed_login_honeypot_ajax">
