@@ -1,5 +1,6 @@
 # f5-asm-policy-template-v13
- Generic ready template folder contain files which are ASM default builtin generic policy templates for version 13
-These templates are the same as the built-in tampltes the included with the version and ready to download.
+ The generic_ready_template folder contains files which are the ASM default builtin generic policy templates for version 13.
 
-Application ready template folader contain application policy templates which is a patched version of the built-in policies for version 13
+These templates are the same as the built-in templates that are included with that version of BIG-IP.
+
+The application_ready_template folder contains the application policy templates which are a patched version of the built-in policies.
