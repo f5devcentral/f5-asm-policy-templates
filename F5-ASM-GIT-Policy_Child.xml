@@ -96,7 +96,7 @@ Parent Inheritance Status was set to Optional. { audit: policy = /Common/Child, 
     <events_sequence_enforcement>true</events_sequence_enforcement>
   </web_scraping>
   <blocking>
-    <enforcement_mode>transparent</enforcement_mode>
+    <enforcement_mode>blocking</enforcement_mode>
     <violation name="Illegal attachment in SOAP message" id="ILLEGAL_SOAP_ATTACHMENT">
       <alarm>false</alarm>
       <block>false</block>
