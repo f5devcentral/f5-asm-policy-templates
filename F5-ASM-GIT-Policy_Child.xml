@@ -10,7 +10,7 @@
 Parent Inheritance Status was set to Optional. { audit: policy = /Common/Child, username = admin, client IP = 192.168.188.85 }</last_change>
   </policy_version>
   <encoding>utf-8</encoding>
-  <description>Rapid Deployment Policy</description>
+  <description>Child Policy Example to retrieved from GIT repo</description>
   <case_insensitive>false</case_insensitive>
   <owa>false</owa>
   <protocol_free>false</protocol_free>
