@@ -8,7 +8,7 @@
     <last_change></last_change>
   </policy_version>
   <encoding>utf-8</encoding>
-  <description>Drupal 8 Ready Template 6.1.3 please check out our latest version at: https://devcentral.f5.com/articles/new-big-ip-asm-v131-drupal-v8-ready-template-31275</description>
+  <description>Drupal 8 Ready Template 6.1.3 please check out our latest version at: https://github.com/f5devcentral/f5-asm-policy-template-v13/tree/master/application_ready_template_v13</description>
   <case_insensitive>false</case_insensitive>
   <owa>false</owa>
   <protocol_free>false</protocol_free>
