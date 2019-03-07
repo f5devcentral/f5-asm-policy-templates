@@ -2,13 +2,6 @@
 <policy integrity_check="3b72959d909a68081eeca7c1255399ff" bigip_version="14.1.0" name="/Common/owasp-no-autotune-v13-v1.1">
   <type>Security</type>
   <policy_version>
-    <timestamp>2019-03-07T09:19:14Z</timestamp>
-    <device_name>asm14100.pmlab.f5.com</device_name>
-    <policy_name>/Common/owasp-no-autotune-v13-v1.1</policy_name>
-    <last_change>Policy Signature Set Unix/Linux Signatures (High/Medium Accuracy) [add]: Policy Signature Set Name was set to Unix/Linux Signatures (High/Medium Accuracy).
-Learn was set to enabled.
-Alarm was set to enabled.
-Block was set to enabled. { audit: policy = /Common/owasp-no-autotune-v13-v1.1, username = admin, client IP = 192.168.188.85 }</last_change>
   </policy_version>
   <encoding>utf-8</encoding>
   <description>owasp-no-autotune-v13.1-v1.1 template that include owasp protection settings and enable policy builder auto learning and applying to the security policy</description>

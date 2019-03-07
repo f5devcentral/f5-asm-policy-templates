@@ -2,10 +2,6 @@
 <policy integrity_check="8e177154ab41034d382a7b904c2d05ec" bigip_version="14.1.0" name="/Common/owasp-autotune-v13.1-v1.1">
   <type>Security</type>
   <policy_version>
-    <timestamp>2019-03-07T09:18:10Z</timestamp>
-    <device_name>asm14100.pmlab.f5.com</device_name>
-    <policy_name>/Common/owasp-autotune-v13.1-v1.1</policy_name>
-    <last_change>Policy Building Settings Policy Building Settings [update]: Learning Mode was set to Automatic. { audit: policy = /Common/owasp-autotune-v13.1-v1.1, username = admin, client IP = 192.168.188.85 }</last_change>
   </policy_version>
   <encoding>utf-8</encoding>
   <description>owasp--autotune-v13.1-v1.1 template that include owasp protection settings and enable policy builder auto learning and applying to the security policy</description>
