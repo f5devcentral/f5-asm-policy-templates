@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policy integrity_check="110556d43f6cd9d3befc27d84914eac7" bigip_version="13.1.0" name="/Common/Drupal_8_Ready_Template_6.1.2_v13">
+<policy integrity_check="d5e9047fea2b1e5ced55d7869b13fcf7" bigip_version="13.1.0" name="/Common/RDP_Drupal8">
   <type>Security</type>
   <policy_version>
     <timestamp>2018-05-16T12:27:18Z</timestamp>
@@ -37,7 +37,7 @@
     <csrf_url>
       <target_pattern>*</target_pattern>
       <wildcard_order>1</wildcard_order>
-      <last_updated>2018-06-04T11:43:19Z</last_updated>
+      <last_updated>2018-05-13T08:17:46Z</last_updated>
       <csrf_url_method>POST</csrf_url_method>
       <csrf_url_enforcement_action>verify-csrf-token</csrf_url_enforcement_action>
       <required_parameters>ignore</required_parameters>
@@ -659,7 +659,6 @@ Connection: close</response_header>
 	"supportID": "&lt;%TS.request.ID()%>",
 	"response_type": "&lt;%TS.response_type()%>"
 }</response_html_code>
-      <ajax_action_type>redirect</ajax_action_type>
     </response_page>
     <response_page cause="Captcha">
       <response_type>default</response_type>
@@ -668,7 +667,6 @@ Cache-Control: no-cache
 Pragma: no-cache
 Content-type: text/html</response_header>
       <response_html_code>This question is for testing whether you are a human visitor and to prevent automated spam submission.&lt;br>%ASM.captcha.image% %ASM.captcha.change%&lt;br>&lt;b>What code is in the image?&lt;/b>%ASM.captcha.solution%&lt;br>%ASM.captcha.submit%&lt;br>&lt;br>Your support ID is: %ASM.captcha.support_id%.</response_html_code>
-      <ajax_action_type>redirect</ajax_action_type>
     </response_page>
     <response_page cause="Captcha_fail">
       <response_type>default</response_type>
@@ -677,7 +675,6 @@ Cache-Control: no-cache
 Pragma: no-cache
 Content-type: text/html</response_header>
       <response_html_code>You have entered an invalid answer for the question. Please try again.&lt;br>%ASM.captcha.image% %ASM.captcha.change%&lt;br>&lt;b>What code is in the image?&lt;/b>%ASM.captcha.solution%&lt;br>%ASM.captcha.submit%&lt;br>&lt;br>Your support ID is: %ASM.captcha.support_id%.</response_html_code>
-      <ajax_action_type>redirect</ajax_action_type>
     </response_page>
     <response_page cause="Failed_login_honeypot">
       <response_type>default</response_type>
@@ -686,7 +683,6 @@ Cache-Control: no-cache
 Pragma: no-cache
 Connection: close</response_header>
       <response_html_code>&lt;html>&lt;head>&lt;title>Login Failed&lt;/title>&lt;/head>&lt;body>Username or password is incorrect. Please try to log in again.&lt;br>&lt;br>&lt;a href="javascript:history.back();">[Go Back]&lt;/a>&lt;/body>&lt;/html></response_html_code>
-      <ajax_action_type>redirect</ajax_action_type>
     </response_page>
     <response_page cause="Failed_login_honeypot_ajax">
       <response_type>default</response_type>
@@ -1869,7 +1865,7 @@ Connection: close</response_header>
       <post_data_length>4096</post_data_length>
       <check_response>false</check_response>
       <in_staging>false</in_staging>
-      <last_updated>2018-06-04T11:43:19Z</last_updated>
+      <last_updated>2018-05-13T08:17:46Z</last_updated>
       <check_url_length>false</check_url_length>
       <check_request_length>false</check_request_length>
       <check_query_string_length>false</check_query_string_length>
@@ -1922,7 +1918,7 @@ Connection: close</response_header>
       <check_metachars>false</check_metachars>
       <check_methods>false</check_methods>
       <in_staging>false</in_staging>
-      <last_updated>2018-06-04T11:43:26Z</last_updated>
+      <last_updated>2018-05-13T08:18:08Z</last_updated>
       <clickjacking_protection>
         <enabled>false</enabled>
         <allow_rendering_in_frames>Never</allow_rendering_in_frames>
@@ -1980,7 +1976,7 @@ Connection: close</response_header>
       <check_metachars>false</check_metachars>
       <check_methods>false</check_methods>
       <in_staging>false</in_staging>
-      <last_updated>2018-06-04T11:43:26Z</last_updated>
+      <last_updated>2018-05-13T08:18:08Z</last_updated>
       <clickjacking_protection>
         <enabled>false</enabled>
         <allow_rendering_in_frames>Never</allow_rendering_in_frames>
@@ -2293,7 +2289,7 @@ Connection: close</response_header>
       <user_config_level>advanced</user_config_level>
       <check_metachars>false</check_metachars>
       <in_staging>false</in_staging>
-      <last_updated>2018-06-04T11:43:26Z</last_updated>
+      <last_updated>2018-05-13T08:17:53Z</last_updated>
       <cors_enforcement_enable>false</cors_enforcement_enable>
       <allow_cors>false</allow_cors>
       <cors_allowed_origins_handling>unmodified</cors_allowed_origins_handling>
@@ -2320,7 +2316,7 @@ Connection: close</response_header>
       <user_config_level>advanced</user_config_level>
       <check_metachars>false</check_metachars>
       <in_staging>false</in_staging>
-      <last_updated>2018-06-04T11:43:26Z</last_updated>
+      <last_updated>2018-05-13T08:17:53Z</last_updated>
       <cors_enforcement_enable>false</cors_enforcement_enable>
       <allow_cors>false</allow_cors>
       <cors_allowed_origins_handling>unmodified</cors_allowed_origins_handling>
@@ -2353,7 +2349,7 @@ Connection: close</response_header>
       <match_regular_expression></match_regular_expression>
       <is_sensitive>false</is_sensitive>
       <in_staging>false</in_staging>
-      <last_updated>2018-06-04T11:43:19Z</last_updated>
+      <last_updated>2018-05-13T08:17:47Z</last_updated>
       <parameter_name_metachars>
         <check_metachars>false</check_metachars>
       </parameter_name_metachars>
@@ -2378,7 +2374,7 @@ Connection: close</response_header>
       <match_regular_expression></match_regular_expression>
       <is_sensitive>false</is_sensitive>
       <in_staging>false</in_staging>
-      <last_updated>2018-06-04T11:43:19Z</last_updated>
+      <last_updated>2018-05-13T08:17:47Z</last_updated>
       <parameter_name_metachars>
         <check_metachars>false</check_metachars>
       </parameter_name_metachars>
@@ -3388,7 +3384,7 @@ Connection: close</response_header>
     </signature_set>
     <enable_staging>false</enable_staging>
     <place_signatures_in_staging>true</place_signatures_in_staging>
-    <sigfile_timestamp>2018-05-08 14:27:25</sigfile_timestamp>
+    <sigfile_timestamp>2018-04-18 09:37:10</sigfile_timestamp>
     <signature signature_id="200000001">
       <enabled>true</enabled>
       <in_staging>true</in_staging>
@@ -11133,6 +11129,10 @@ Connection: close</response_header>
       <enabled>true</enabled>
       <in_staging>true</in_staging>
     </signature>
+    <signature signature_id="200003073">
+      <enabled>true</enabled>
+      <in_staging>true</in_staging>
+    </signature>
     <signature signature_id="200003074">
       <enabled>true</enabled>
       <in_staging>true</in_staging>
@@ -15950,82 +15950,6 @@ Connection: close</response_header>
       <in_staging>true</in_staging>
     </signature>
     <signature signature_id="200004444">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004445">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004446">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004447">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004448">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004449">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004450">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004451">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004452">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004453">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004454">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004455">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004456">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004457">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004458">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004459">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004460">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004461">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004462">
-      <enabled>true</enabled>
-      <in_staging>true</in_staging>
-    </signature>
-    <signature signature_id="200004463">
       <enabled>true</enabled>
       <in_staging>true</in_staging>
     </signature>
@@ -22996,6 +22920,17 @@ Connection: close</response_header>
     <enabled>false</enabled>
     <user_source>APM Usernames and Session ID</user_source>
   </database_protection>
+  <header type="wildcard" name="*">
+    <wildcard_order>1</wildcard_order>
+    <is_mandatory>false</is_mandatory>
+    <check_signatures>true</check_signatures>
+    <is_base64>false</is_base64>
+    <percent_normalization>true</percent_normalization>
+    <uri_normalization>false</uri_normalization>
+    <html_normalization>false</html_normalization>
+    <enable_normalization_violation>false</enable_normalization_violation>
+    <is_default>true</is_default>
+  </header>
   <header type="explicit" name="authorization">
     <is_mandatory>false</is_mandatory>
     <check_signatures>true</check_signatures>
@@ -23011,17 +22946,6 @@ Connection: close</response_header>
     <check_signatures>false</check_signatures>
     <is_base64>false</is_base64>
     <percent_normalization>false</percent_normalization>
-    <uri_normalization>false</uri_normalization>
-    <html_normalization>false</html_normalization>
-    <enable_normalization_violation>false</enable_normalization_violation>
-    <is_default>true</is_default>
-  </header>
-  <header type="wildcard" name="*">
-    <wildcard_order>1</wildcard_order>
-    <is_mandatory>false</is_mandatory>
-    <check_signatures>true</check_signatures>
-    <is_base64>false</is_base64>
-    <percent_normalization>true</percent_normalization>
     <uri_normalization>false</uri_normalization>
     <html_normalization>false</html_normalization>
     <enable_normalization_violation>false</enable_normalization_violation>
@@ -23055,7 +22979,7 @@ Connection: close</response_header>
     <identify_device>false</identify_device>
     <maximum_prevention_time>3600</maximum_prevention_time>
     <flg_enabled>false</flg_enabled>
-    <last_updated>1528112599</last_updated>
+    <last_updated>1526199466</last_updated>
     <detection_threshold_credentials_stuffing_matches_reached>100</detection_threshold_credentials_stuffing_matches_reached>
     <detection_threshold_action>alarm-and-captcha</detection_threshold_action>
     <login_attempts_from_the_same_user_threshold>3</login_attempts_from_the_same_user_threshold>
@@ -23076,190 +23000,6 @@ Connection: close</response_header>
     <client_side_integrity_bypass>true</client_side_integrity_bypass>
   </brute_force>
   <suggestions>
-    <suggestion key="responsecode:r2:2f9a4df737eb148eaaa92170fb296f95">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>update_append</suggestion_action>
-      <violation>HTTP_STATUS_IN_RESPONSE</violation>
-      <element_name>Policy General Settings</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEESJGNTo6QVNNQ29uZmlnOjpBbGxvd2VkUmVz
-cG9uc2VDb2RlAwIAAAAKE0FsbG93ZWRSZXNwb25zZUNvZGUNAAAAX19zaG9ydF9jbGFzcwb0AQAA
-DQAAAHJlc3BvbnNlX2NvZGUVAAAAYWxsb3dlZF9yZXNwb25zZV9jb2RlCMUMAAAAZWxlbWVudF90
-eXBl
-</element>
-      <matched_wildcard_element></matched_wildcard_element>
-      <description>Add 500 to Allowed Response Codes.</description>
-      <occurrence_count>1</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>true</is_read>
-      <first_occurrence_time>1526200548</first_occurrence_time>
-      <last_occurrence_time>1526200548</last_occurrence_time>
-      <average_violation_rating>1</average_violation_rating>
-      <is_automatically_learnable>false</is_automatically_learnable>
-      <suggestion_reason>violation_mitigation</suggestion_reason>
-      <element_type>ALLOWED_RESPONSE_CODE</element_type>
-      <element_kind>tm:asm:policies:general:generalstate</element_kind>
-      <element_id></element_id>
-      <sig_id>0</sig_id>
-      <section>General Policy Settings</section>
-    </suggestion>
-    <suggestion key="filetype:r2:5f3f4681121b460e3304a1887f42f1c3:r2:filetypedeldisallow">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>delete</suggestion_action>
-      <violation>OBJ_TYPE</violation>
-      <element_name>bat</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MIggwAAABlbGVtZW50X3R5cGUEERdGNTo6QVNN
-Q29uZmlnOjpGaWxldHlwZQMDAAAACghGaWxldHlwZQ0AAABfX3Nob3J0X2NsYXNzCgNiYXQNAAAA
-ZmlsZXR5cGVfbmFtZQiACwAAAGlzX3dpbGRjYXJkCAAAAGZpbGV0eXBl
-</element>
-      <matched_wildcard_element></matched_wildcard_element>
-      <description>Delete Disallowed File Type</description>
-      <occurrence_count>1</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>true</is_read>
-      <first_occurrence_time>1526366824</first_occurrence_time>
-      <last_occurrence_time>1526366824</last_occurrence_time>
-      <average_violation_rating>3</average_violation_rating>
-      <is_automatically_learnable>false</is_automatically_learnable>
-      <suggestion_reason>violation_mitigation</suggestion_reason>
-      <element_type>FILETYPE</element_type>
-      <element_kind>tm:asm:policies:filetypes:filetypestate</element_kind>
-      <element_id>Xz9GgRIbRg4zBKGIf0Lxww</element_id>
-      <sig_id>0</sig_id>
-      <section>File Types</section>
-    </suggestion>
-    <suggestion key="filetype:r2:4d90362d661461e558408e982aaa49d3:r2:filetypedeldisallow">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>delete</suggestion_action>
-      <violation>OBJ_TYPE</violation>
-      <element_name>ini</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MIggwAAABlbGVtZW50X3R5cGUEERdGNTo6QVNN
-Q29uZmlnOjpGaWxldHlwZQMDAAAACghGaWxldHlwZQ0AAABfX3Nob3J0X2NsYXNzCgNpbmkNAAAA
-ZmlsZXR5cGVfbmFtZQiACwAAAGlzX3dpbGRjYXJkCAAAAGZpbGV0eXBl
-</element>
-      <matched_wildcard_element></matched_wildcard_element>
-      <description>Delete Disallowed File Type</description>
-      <occurrence_count>1</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>false</is_read>
-      <first_occurrence_time>1526387980</first_occurrence_time>
-      <last_occurrence_time>1526387980</last_occurrence_time>
-      <average_violation_rating>3</average_violation_rating>
-      <is_automatically_learnable>false</is_automatically_learnable>
-      <suggestion_reason>violation_mitigation</suggestion_reason>
-      <element_type>FILETYPE</element_type>
-      <element_kind>tm:asm:policies:filetypes:filetypestate</element_kind>
-      <element_id>TZA2LWYUYeVYQI6YKqpJ0w</element_id>
-      <sig_id>0</sig_id>
-      <section>File Types</section>
-    </suggestion>
-    <suggestion key="parameter:r2:3389dae361af79b04c9c8e7057f60cc6:r2:psignature:200000098">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>update_append</suggestion_action>
-      <violation>ATTACK_SIGNATURE_DETECTED</violation>
-      <element_name>*</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MIigwAAABlbGVtZW50X3R5cGUEERhGNTo6QVNN
-Q29uZmlnOjpQYXJhbWV0ZXIDBQAAAAoJUGFyYW1ldGVyDQAAAF9fc2hvcnRfY2xhc3MIgQsAAABp
-c193aWxkY2FyZAiBCwAAAHBhcmFtX2xldmVsCgEqCgAAAHBhcmFtX25hbWUEAgEAAAAEESBGNTo6
-QVNNQ29uZmlnOjpTaWduYXR1cmVPdmVycmlkZQMEAAAAChFTaWduYXR1cmVPdmVycmlkZQ0AAABf
-X3Nob3J0X2NsYXNzCIAKAAAAaXNfZW5hYmxlZAiADgAAAGlzX3F1YXJhbnRpbmVkCgkyMDAwMDAw
-OTgGAAAAc2lnX2lkFgAAAHBhcmFtX25lZ3NpZ19vdmVycmlkZXMJAAAAcGFyYW1ldGVy
-</element>
-      <matched_wildcard_element></matched_wildcard_element>
-      <description>Add XSS script tag (Parameter) (disabled on the parameter) to Overridden Attack Signatures.</description>
-      <occurrence_count>1</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>false</is_read>
-      <first_occurrence_time>1526388070</first_occurrence_time>
-      <last_occurrence_time>1526388070</last_occurrence_time>
-      <average_violation_rating>3</average_violation_rating>
-      <is_automatically_learnable>true</is_automatically_learnable>
-      <suggestion_reason>violation_mitigation</suggestion_reason>
-      <element_type>PARAMETER</element_type>
-      <element_kind>tm:asm:policies:parameters:parameterstate</element_kind>
-      <element_id>N_a3D1S7OKDehYEPb-mgCg</element_id>
-      <sig_id>200000098</sig_id>
-      <section>Parameters</section>
-    </suggestion>
-    <suggestion key="parameter:r2:3389dae361af79b04c9c8e7057f60cc6:r2:psignature:200001088">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>update_append</suggestion_action>
-      <violation>ATTACK_SIGNATURE_DETECTED</violation>
-      <element_name>*</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MIigwAAABlbGVtZW50X3R5cGUEERhGNTo6QVNN
-Q29uZmlnOjpQYXJhbWV0ZXIDBQAAAAoJUGFyYW1ldGVyDQAAAF9fc2hvcnRfY2xhc3MIgQsAAABp
-c193aWxkY2FyZAiBCwAAAHBhcmFtX2xldmVsCgEqCgAAAHBhcmFtX25hbWUEAgEAAAAEESBGNTo6
-QVNNQ29uZmlnOjpTaWduYXR1cmVPdmVycmlkZQMEAAAAChFTaWduYXR1cmVPdmVycmlkZQ0AAABf
-X3Nob3J0X2NsYXNzCIAKAAAAaXNfZW5hYmxlZAiADgAAAGlzX3F1YXJhbnRpbmVkCgkyMDAwMDEw
-ODgGAAAAc2lnX2lkFgAAAHBhcmFtX25lZ3NpZ19vdmVycmlkZXMJAAAAcGFyYW1ldGVy
-</element>
-      <matched_wildcard_element></matched_wildcard_element>
-      <description>Add alert() (Parameter) (disabled on the parameter) to Overridden Attack Signatures.</description>
-      <occurrence_count>1</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>false</is_read>
-      <first_occurrence_time>1526388070</first_occurrence_time>
-      <last_occurrence_time>1526388070</last_occurrence_time>
-      <average_violation_rating>3</average_violation_rating>
-      <is_automatically_learnable>true</is_automatically_learnable>
-      <suggestion_reason>violation_mitigation</suggestion_reason>
-      <element_type>PARAMETER</element_type>
-      <element_kind>tm:asm:policies:parameters:parameterstate</element_kind>
-      <element_id>N_a3D1S7OKDehYEPb-mgCg</element_id>
-      <sig_id>200001088</sig_id>
-      <section>Parameters</section>
-    </suggestion>
-    <suggestion key="parameter:r2:3389dae361af79b04c9c8e7057f60cc6:r2:psignature:200001475">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>update_append</suggestion_action>
-      <violation>ATTACK_SIGNATURE_DETECTED</violation>
-      <element_name>*</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MIigwAAABlbGVtZW50X3R5cGUEERhGNTo6QVNN
-Q29uZmlnOjpQYXJhbWV0ZXIDBQAAAAoJUGFyYW1ldGVyDQAAAF9fc2hvcnRfY2xhc3MIgQsAAABp
-c193aWxkY2FyZAiBCwAAAHBhcmFtX2xldmVsCgEqCgAAAHBhcmFtX25hbWUEAgEAAAAEESBGNTo6
-QVNNQ29uZmlnOjpTaWduYXR1cmVPdmVycmlkZQMEAAAAChFTaWduYXR1cmVPdmVycmlkZQ0AAABf
-X3Nob3J0X2NsYXNzCIAKAAAAaXNfZW5hYmxlZAiADgAAAGlzX3F1YXJhbnRpbmVkCgkyMDAwMDE0
-NzUGAAAAc2lnX2lkFgAAAHBhcmFtX25lZ3NpZ19vdmVycmlkZXMJAAAAcGFyYW1ldGVy
-</element>
-      <matched_wildcard_element></matched_wildcard_element>
-      <description>Add XSS script tag end (Parameter) (2) (disabled on the parameter) to Overridden Attack Signatures.</description>
-      <occurrence_count>1</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>true</is_read>
-      <first_occurrence_time>1526388070</first_occurrence_time>
-      <last_occurrence_time>1526388070</last_occurrence_time>
-      <average_violation_rating>3</average_violation_rating>
-      <is_automatically_learnable>true</is_automatically_learnable>
-      <suggestion_reason>violation_mitigation</suggestion_reason>
-      <element_type>PARAMETER</element_type>
-      <element_kind>tm:asm:policies:parameters:parameterstate</element_kind>
-      <element_id>N_a3D1S7OKDehYEPb-mgCg</element_id>
-      <sig_id>200001475</sig_id>
-      <section>Parameters</section>
-    </suggestion>
     <suggestion key="host:r2:84a625cdba32ea4019f29d2aff234d08">
       <suggestion_score>5</suggestion_score>
       <suggestion_status>ignored</suggestion_status>
@@ -23317,6 +23057,106 @@ cwoQd3d3LnNldmlsbGFmYy5lcwkAAABob3N0X25hbWUPAAAAdmFsaWRfaG9zdF9uYW1l
       <sig_id>0</sig_id>
       <refinement>VALID_HOST_NAME</refinement>
       <section>Headers</section>
+    </suggestion>
+    <suggestion key="cookie:r2:2e30cb5e9e1093e88cc1601ae9c39296:r2:type:enforced">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>add_or_update</suggestion_action>
+      <element_name>SESS36af1aad9dd2845b57473404cf31a275</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEERVGNTo6QVNNQ29uZmlnOjpDb29raWUDBAAA
+AAoGQ29va2llDQAAAF9fc2hvcnRfY2xhc3MIghcAAABjb29raWVfZW5mb3JjZW1lbnRfdHlwZQok
+U0VTUzM2YWYxYWFkOWRkMjg0NWI1NzQ3MzQwNGNmMzFhMjc1CwAAAGNvb2tpZV9uYW1lCIALAAAA
+aXNfd2lsZGNhcmQGAAAAY29va2llCIsMAAAAZWxlbWVudF90eXBl
+</element>
+      <matched_wildcard_element_name>*</matched_wildcard_element_name>
+      <matched_wildcard_element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEERVGNTo6QVNNQ29uZmlnOjpDb29raWUDAgAA
+AAoGQ29va2llDQAAAF9fc2hvcnRfY2xhc3MKASoLAAAAY29va2llX25hbWUGAAAAY29va2llCIsM
+AAAAZWxlbWVudF90eXBl
+</matched_wildcard_element>
+      <description>Add/Update Cookie. Set Enforcement Type to Enforced.</description>
+      <occurrence_count>19</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>true</is_read>
+      <first_occurrence_time>1526200166</first_occurrence_time>
+      <last_occurrence_time>1526200466</last_occurrence_time>
+      <average_violation_rating>0</average_violation_rating>
+      <is_automatically_learnable>true</is_automatically_learnable>
+      <suggestion_reason>policy_refining</suggestion_reason>
+      <element_type>COOKIE</element_type>
+      <element_kind>tm:asm:policies:cookies:cookiestate</element_kind>
+      <element_id>LjDLXp4Qk-iMwWAa6cOSlg</element_id>
+      <sig_id>0</sig_id>
+      <refinement>ENFORCE_COOKIE</refinement>
+      <section>Cookies</section>
+    </suggestion>
+    <suggestion key="responsecode:r2:2f9a4df737eb148eaaa92170fb296f95">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>update_append</suggestion_action>
+      <violation>HTTP_STATUS_IN_RESPONSE</violation>
+      <element_name>Policy General Settings</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEESJGNTo6QVNNQ29uZmlnOjpBbGxvd2VkUmVz
+cG9uc2VDb2RlAwIAAAAKE0FsbG93ZWRSZXNwb25zZUNvZGUNAAAAX19zaG9ydF9jbGFzcwb0AQAA
+DQAAAHJlc3BvbnNlX2NvZGUVAAAAYWxsb3dlZF9yZXNwb25zZV9jb2RlCMUMAAAAZWxlbWVudF90
+eXBl
+</element>
+      <matched_wildcard_element></matched_wildcard_element>
+      <description>Add 500 to Allowed Response Codes.</description>
+      <occurrence_count>1</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>true</is_read>
+      <first_occurrence_time>1526200548</first_occurrence_time>
+      <last_occurrence_time>1526200548</last_occurrence_time>
+      <average_violation_rating>1</average_violation_rating>
+      <is_automatically_learnable>false</is_automatically_learnable>
+      <suggestion_reason>violation_mitigation</suggestion_reason>
+      <element_type>ALLOWED_RESPONSE_CODE</element_type>
+      <element_kind>tm:asm:policies:general:generalstate</element_kind>
+      <element_id></element_id>
+      <sig_id>0</sig_id>
+      <section>General Policy Settings</section>
+    </suggestion>
+    <suggestion key="cookie:r2:6008774de98a385ca489820884927365:r2:type:enforced">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>add_or_update</suggestion_action>
+      <element_name>header_images</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEERVGNTo6QVNNQ29uZmlnOjpDb29raWUDBAAA
+AAoGQ29va2llDQAAAF9fc2hvcnRfY2xhc3MIghcAAABjb29raWVfZW5mb3JjZW1lbnRfdHlwZQoN
+aGVhZGVyX2ltYWdlcwsAAABjb29raWVfbmFtZQiACwAAAGlzX3dpbGRjYXJkBgAAAGNvb2tpZQiL
+DAAAAGVsZW1lbnRfdHlwZQ==
+</element>
+      <matched_wildcard_element_name>*</matched_wildcard_element_name>
+      <matched_wildcard_element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEERVGNTo6QVNNQ29uZmlnOjpDb29raWUDAgAA
+AAoGQ29va2llDQAAAF9fc2hvcnRfY2xhc3MKASoLAAAAY29va2llX25hbWUGAAAAY29va2llCIsM
+AAAAZWxlbWVudF90eXBl
+</matched_wildcard_element>
+      <description>Add/Update Cookie. Set Enforcement Type to Enforced.</description>
+      <occurrence_count>85</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>true</is_read>
+      <first_occurrence_time>1526200916</first_occurrence_time>
+      <last_occurrence_time>1526388044</last_occurrence_time>
+      <average_violation_rating>0</average_violation_rating>
+      <is_automatically_learnable>true</is_automatically_learnable>
+      <suggestion_reason>policy_refining</suggestion_reason>
+      <element_type>COOKIE</element_type>
+      <element_kind>tm:asm:policies:cookies:cookiestate</element_kind>
+      <element_id>YAh3TemKOFykiYIIhJJzZQ</element_id>
+      <sig_id>0</sig_id>
+      <refinement>ENFORCE_COOKIE</refinement>
+      <section>Cookies</section>
     </suggestion>
     <suggestion key="host:r2:2114f8dae4710ec7ff8fb873186b0f88">
       <suggestion_score>5</suggestion_score>
@@ -23376,163 +23216,6 @@ cwoOd3d3LmRydXBhbC5jb20JAAAAaG9zdF9uYW1lDwAAAHZhbGlkX2hvc3RfbmFtZQ==
       <refinement>VALID_HOST_NAME</refinement>
       <section>Headers</section>
     </suggestion>
-    <suggestion key="host:r2:8828364a22e9909a7f53b13c51eaaad5">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>add_or_update</suggestion_action>
-      <element_name>www.manh.com</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MI3gwAAABlbGVtZW50X3R5cGUEERxGNTo6QVNN
-Q29uZmlnOjpWYWxpZEhvc3ROYW1lAwIAAAAKDVZhbGlkSG9zdE5hbWUNAAAAX19zaG9ydF9jbGFz
-cwoMd3d3Lm1hbmguY29tCQAAAGhvc3RfbmFtZQ8AAAB2YWxpZF9ob3N0X25hbWU=
-</element>
-      <matched_wildcard_element></matched_wildcard_element>
-      <description>Add Valid Host Name</description>
-      <occurrence_count>280</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>true</is_read>
-      <first_occurrence_time>1526211310</first_occurrence_time>
-      <last_occurrence_time>1526299188</last_occurrence_time>
-      <average_violation_rating>0.1</average_violation_rating>
-      <is_automatically_learnable>true</is_automatically_learnable>
-      <suggestion_reason>policy_refining</suggestion_reason>
-      <element_type>VALID_HOST_NAME</element_type>
-      <element_kind>tm:asm:policies:host-names:host-namestate</element_kind>
-      <element_id>iCg2SiLpkJp_U7E8Ueqq1Q</element_id>
-      <sig_id>0</sig_id>
-      <refinement>VALID_HOST_NAME</refinement>
-      <section>Headers</section>
-    </suggestion>
-    <suggestion key="host:r2:7fb9af89ca634fc06d3b0bbe25efea37">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>add_or_update</suggestion_action>
-      <element_name>www.youthonrecord.org</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MI3gwAAABlbGVtZW50X3R5cGUEERxGNTo6QVNN
-Q29uZmlnOjpWYWxpZEhvc3ROYW1lAwIAAAAKDVZhbGlkSG9zdE5hbWUNAAAAX19zaG9ydF9jbGFz
-cwoVd3d3LnlvdXRob25yZWNvcmQub3JnCQAAAGhvc3RfbmFtZQ8AAAB2YWxpZF9ob3N0X25hbWU=
-</element>
-      <matched_wildcard_element></matched_wildcard_element>
-      <description>Add Valid Host Name</description>
-      <occurrence_count>236</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>true</is_read>
-      <first_occurrence_time>1526218136</first_occurrence_time>
-      <last_occurrence_time>1526387802</last_occurrence_time>
-      <average_violation_rating>0</average_violation_rating>
-      <is_automatically_learnable>true</is_automatically_learnable>
-      <suggestion_reason>policy_refining</suggestion_reason>
-      <element_type>VALID_HOST_NAME</element_type>
-      <element_kind>tm:asm:policies:host-names:host-namestate</element_kind>
-      <element_id>f7mvicpjT8BtOwu-Je_qNw</element_id>
-      <sig_id>0</sig_id>
-      <refinement>VALID_HOST_NAME</refinement>
-      <section>Headers</section>
-    </suggestion>
-    <suggestion key="method:r2:3e75383a5992a6d15fb81e872e46e256">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>add_or_update</suggestion_action>
-      <violation>ILLEGAL_METHOD</violation>
-      <element_name>PUT</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEERxGNTo6QVNNQ29uZmlnOjpBbGxvd2VkTWV0
-aG9kAwIAAAAKDUFsbG93ZWRNZXRob2QNAAAAX19zaG9ydF9jbGFzcwoDUFVUCwAAAG1ldGhvZF9u
-YW1lDgAAAGFsbG93ZWRfbWV0aG9kCIwMAAAAZWxlbWVudF90eXBl
-</element>
-      <matched_wildcard_element></matched_wildcard_element>
-      <description>Add Allowed Method</description>
-      <occurrence_count>1</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>false</is_read>
-      <first_occurrence_time>1526387825</first_occurrence_time>
-      <last_occurrence_time>1526387825</last_occurrence_time>
-      <average_violation_rating>3</average_violation_rating>
-      <is_automatically_learnable>false</is_automatically_learnable>
-      <suggestion_reason>violation_mitigation</suggestion_reason>
-      <element_type>ALLOWED_METHOD</element_type>
-      <element_kind>tm:asm:policies:methods:methodstate</element_kind>
-      <element_id>PnU4OlmSptFfuB6HLkbiVg</element_id>
-      <sig_id>0</sig_id>
-      <section>Headers</section>
-    </suggestion>
-    <suggestion key="cookie:r2:2e30cb5e9e1093e88cc1601ae9c39296:r2:type:enforced">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>add_or_update</suggestion_action>
-      <element_name>SESS36af1aad9dd2845b57473404cf31a275</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEERVGNTo6QVNNQ29uZmlnOjpDb29raWUDBAAA
-AAoGQ29va2llDQAAAF9fc2hvcnRfY2xhc3MIghcAAABjb29raWVfZW5mb3JjZW1lbnRfdHlwZQok
-U0VTUzM2YWYxYWFkOWRkMjg0NWI1NzQ3MzQwNGNmMzFhMjc1CwAAAGNvb2tpZV9uYW1lCIALAAAA
-aXNfd2lsZGNhcmQGAAAAY29va2llCIsMAAAAZWxlbWVudF90eXBl
-</element>
-      <matched_wildcard_element_name>*</matched_wildcard_element_name>
-      <matched_wildcard_element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEERVGNTo6QVNNQ29uZmlnOjpDb29raWUDAgAA
-AAoGQ29va2llDQAAAF9fc2hvcnRfY2xhc3MKASoLAAAAY29va2llX25hbWUGAAAAY29va2llCIsM
-AAAAZWxlbWVudF90eXBl
-</matched_wildcard_element>
-      <description>Add/Update Cookie. Set Enforcement Type to Enforced.</description>
-      <occurrence_count>19</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>true</is_read>
-      <first_occurrence_time>1526200166</first_occurrence_time>
-      <last_occurrence_time>1526200466</last_occurrence_time>
-      <average_violation_rating>0</average_violation_rating>
-      <is_automatically_learnable>true</is_automatically_learnable>
-      <suggestion_reason>policy_refining</suggestion_reason>
-      <element_type>COOKIE</element_type>
-      <element_kind>tm:asm:policies:cookies:cookiestate</element_kind>
-      <element_id>LjDLXp4Qk-iMwWAa6cOSlg</element_id>
-      <sig_id>0</sig_id>
-      <refinement>ENFORCE_COOKIE</refinement>
-      <section>Cookies</section>
-    </suggestion>
-    <suggestion key="cookie:r2:6008774de98a385ca489820884927365:r2:type:enforced">
-      <suggestion_score>5</suggestion_score>
-      <suggestion_status>ignored</suggestion_status>
-      <suggestion_action>add_or_update</suggestion_action>
-      <element_name>header_images</element_name>
-      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEERVGNTo6QVNNQ29uZmlnOjpDb29raWUDBAAA
-AAoGQ29va2llDQAAAF9fc2hvcnRfY2xhc3MIghcAAABjb29raWVfZW5mb3JjZW1lbnRfdHlwZQoN
-aGVhZGVyX2ltYWdlcwsAAABjb29raWVfbmFtZQiACwAAAGlzX3dpbGRjYXJkBgAAAGNvb2tpZQiL
-DAAAAGVsZW1lbnRfdHlwZQ==
-</element>
-      <matched_wildcard_element_name>*</matched_wildcard_element_name>
-      <matched_wildcard_element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
-c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEERVGNTo6QVNNQ29uZmlnOjpDb29raWUDAgAA
-AAoGQ29va2llDQAAAF9fc2hvcnRfY2xhc3MKASoLAAAAY29va2llX25hbWUGAAAAY29va2llCIsM
-AAAAZWxlbWVudF90eXBl
-</matched_wildcard_element>
-      <description>Add/Update Cookie. Set Enforcement Type to Enforced.</description>
-      <occurrence_count>85</occurrence_count>
-      <trusted_sources_count>0</trusted_sources_count>
-      <untrusted_sources_count>1</untrusted_sources_count>
-      <user_comment></user_comment>
-      <is_read>true</is_read>
-      <first_occurrence_time>1526200916</first_occurrence_time>
-      <last_occurrence_time>1526388044</last_occurrence_time>
-      <average_violation_rating>0</average_violation_rating>
-      <is_automatically_learnable>true</is_automatically_learnable>
-      <suggestion_reason>policy_refining</suggestion_reason>
-      <element_type>COOKIE</element_type>
-      <element_kind>tm:asm:policies:cookies:cookiestate</element_kind>
-      <element_id>YAh3TemKOFykiYIIhJJzZQ</element_id>
-      <sig_id>0</sig_id>
-      <refinement>ENFORCE_COOKIE</refinement>
-      <section>Cookies</section>
-    </suggestion>
     <suggestion key="cookie:r2:9f13ed63618f434b8389cd737292c591:r2:type:enforced">
       <suggestion_score>5</suggestion_score>
       <suggestion_status>ignored</suggestion_status>
@@ -23567,6 +23250,35 @@ AAAAZWxlbWVudF90eXBl
       <sig_id>0</sig_id>
       <refinement>ENFORCE_COOKIE</refinement>
       <section>Cookies</section>
+    </suggestion>
+    <suggestion key="host:r2:8828364a22e9909a7f53b13c51eaaad5">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>add_or_update</suggestion_action>
+      <element_name>www.manh.com</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MI3gwAAABlbGVtZW50X3R5cGUEERxGNTo6QVNN
+Q29uZmlnOjpWYWxpZEhvc3ROYW1lAwIAAAAKDVZhbGlkSG9zdE5hbWUNAAAAX19zaG9ydF9jbGFz
+cwoMd3d3Lm1hbmguY29tCQAAAGhvc3RfbmFtZQ8AAAB2YWxpZF9ob3N0X25hbWU=
+</element>
+      <matched_wildcard_element></matched_wildcard_element>
+      <description>Add Valid Host Name</description>
+      <occurrence_count>280</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>true</is_read>
+      <first_occurrence_time>1526211310</first_occurrence_time>
+      <last_occurrence_time>1526299188</last_occurrence_time>
+      <average_violation_rating>0.1</average_violation_rating>
+      <is_automatically_learnable>true</is_automatically_learnable>
+      <suggestion_reason>policy_refining</suggestion_reason>
+      <element_type>VALID_HOST_NAME</element_type>
+      <element_kind>tm:asm:policies:host-names:host-namestate</element_kind>
+      <element_id>iCg2SiLpkJp_U7E8Ueqq1Q</element_id>
+      <sig_id>0</sig_id>
+      <refinement>VALID_HOST_NAME</refinement>
+      <section>Headers</section>
     </suggestion>
     <suggestion key="cookie:r2:54172ecd4d70589c27414d0675884904:r2:type:enforced">
       <suggestion_score>5</suggestion_score>
@@ -24162,6 +23874,218 @@ AAAAZWxlbWVudF90eXBl
       <sig_id>0</sig_id>
       <refinement>ENFORCE_COOKIE</refinement>
       <section>Cookies</section>
+    </suggestion>
+    <suggestion key="host:r2:7fb9af89ca634fc06d3b0bbe25efea37">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>add_or_update</suggestion_action>
+      <element_name>www.youthonrecord.org</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MI3gwAAABlbGVtZW50X3R5cGUEERxGNTo6QVNN
+Q29uZmlnOjpWYWxpZEhvc3ROYW1lAwIAAAAKDVZhbGlkSG9zdE5hbWUNAAAAX19zaG9ydF9jbGFz
+cwoVd3d3LnlvdXRob25yZWNvcmQub3JnCQAAAGhvc3RfbmFtZQ8AAAB2YWxpZF9ob3N0X25hbWU=
+</element>
+      <matched_wildcard_element></matched_wildcard_element>
+      <description>Add Valid Host Name</description>
+      <occurrence_count>236</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>true</is_read>
+      <first_occurrence_time>1526218136</first_occurrence_time>
+      <last_occurrence_time>1526387802</last_occurrence_time>
+      <average_violation_rating>0</average_violation_rating>
+      <is_automatically_learnable>true</is_automatically_learnable>
+      <suggestion_reason>policy_refining</suggestion_reason>
+      <element_type>VALID_HOST_NAME</element_type>
+      <element_kind>tm:asm:policies:host-names:host-namestate</element_kind>
+      <element_id>f7mvicpjT8BtOwu-Je_qNw</element_id>
+      <sig_id>0</sig_id>
+      <refinement>VALID_HOST_NAME</refinement>
+      <section>Headers</section>
+    </suggestion>
+    <suggestion key="filetype:r2:5f3f4681121b460e3304a1887f42f1c3:r2:filetypedeldisallow">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>delete</suggestion_action>
+      <violation>OBJ_TYPE</violation>
+      <element_name>bat</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MIggwAAABlbGVtZW50X3R5cGUEERdGNTo6QVNN
+Q29uZmlnOjpGaWxldHlwZQMDAAAACghGaWxldHlwZQ0AAABfX3Nob3J0X2NsYXNzCgNiYXQNAAAA
+ZmlsZXR5cGVfbmFtZQiACwAAAGlzX3dpbGRjYXJkCAAAAGZpbGV0eXBl
+</element>
+      <matched_wildcard_element></matched_wildcard_element>
+      <description>Delete Disallowed File Type</description>
+      <occurrence_count>1</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>true</is_read>
+      <first_occurrence_time>1526366824</first_occurrence_time>
+      <last_occurrence_time>1526366824</last_occurrence_time>
+      <average_violation_rating>3</average_violation_rating>
+      <is_automatically_learnable>false</is_automatically_learnable>
+      <suggestion_reason>violation_mitigation</suggestion_reason>
+      <element_type>FILETYPE</element_type>
+      <element_kind>tm:asm:policies:filetypes:filetypestate</element_kind>
+      <element_id>Xz9GgRIbRg4zBKGIf0Lxww</element_id>
+      <sig_id>0</sig_id>
+      <section>File Types</section>
+    </suggestion>
+    <suggestion key="method:r2:3e75383a5992a6d15fb81e872e46e256">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>add_or_update</suggestion_action>
+      <violation>ILLEGAL_METHOD</violation>
+      <element_name>PUT</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MEERxGNTo6QVNNQ29uZmlnOjpBbGxvd2VkTWV0
+aG9kAwIAAAAKDUFsbG93ZWRNZXRob2QNAAAAX19zaG9ydF9jbGFzcwoDUFVUCwAAAG1ldGhvZF9u
+YW1lDgAAAGFsbG93ZWRfbWV0aG9kCIwMAAAAZWxlbWVudF90eXBl
+</element>
+      <matched_wildcard_element></matched_wildcard_element>
+      <description>Add Allowed Method</description>
+      <occurrence_count>1</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>false</is_read>
+      <first_occurrence_time>1526387825</first_occurrence_time>
+      <last_occurrence_time>1526387825</last_occurrence_time>
+      <average_violation_rating>3</average_violation_rating>
+      <is_automatically_learnable>false</is_automatically_learnable>
+      <suggestion_reason>violation_mitigation</suggestion_reason>
+      <element_type>ALLOWED_METHOD</element_type>
+      <element_kind>tm:asm:policies:methods:methodstate</element_kind>
+      <element_id>PnU4OlmSptFfuB6HLkbiVg</element_id>
+      <sig_id>0</sig_id>
+      <section>Headers</section>
+    </suggestion>
+    <suggestion key="filetype:r2:4d90362d661461e558408e982aaa49d3:r2:filetypedeldisallow">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>delete</suggestion_action>
+      <violation>OBJ_TYPE</violation>
+      <element_name>ini</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MIggwAAABlbGVtZW50X3R5cGUEERdGNTo6QVNN
+Q29uZmlnOjpGaWxldHlwZQMDAAAACghGaWxldHlwZQ0AAABfX3Nob3J0X2NsYXNzCgNpbmkNAAAA
+ZmlsZXR5cGVfbmFtZQiACwAAAGlzX3dpbGRjYXJkCAAAAGZpbGV0eXBl
+</element>
+      <matched_wildcard_element></matched_wildcard_element>
+      <description>Delete Disallowed File Type</description>
+      <occurrence_count>1</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>false</is_read>
+      <first_occurrence_time>1526387980</first_occurrence_time>
+      <last_occurrence_time>1526387980</last_occurrence_time>
+      <average_violation_rating>3</average_violation_rating>
+      <is_automatically_learnable>false</is_automatically_learnable>
+      <suggestion_reason>violation_mitigation</suggestion_reason>
+      <element_type>FILETYPE</element_type>
+      <element_kind>tm:asm:policies:filetypes:filetypestate</element_kind>
+      <element_id>TZA2LWYUYeVYQI6YKqpJ0w</element_id>
+      <sig_id>0</sig_id>
+      <section>File Types</section>
+    </suggestion>
+    <suggestion key="parameter:r2:3389dae361af79b04c9c8e7057f60cc6:r2:psignature:200000098">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>update_append</suggestion_action>
+      <violation>ATTACK_SIGNATURE_DETECTED</violation>
+      <element_name>*</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MIigwAAABlbGVtZW50X3R5cGUEERhGNTo6QVNN
+Q29uZmlnOjpQYXJhbWV0ZXIDBQAAAAoJUGFyYW1ldGVyDQAAAF9fc2hvcnRfY2xhc3MIgQsAAABp
+c193aWxkY2FyZAiBCwAAAHBhcmFtX2xldmVsCgEqCgAAAHBhcmFtX25hbWUEAgEAAAAEESBGNTo6
+QVNNQ29uZmlnOjpTaWduYXR1cmVPdmVycmlkZQMEAAAAChFTaWduYXR1cmVPdmVycmlkZQ0AAABf
+X3Nob3J0X2NsYXNzCIAKAAAAaXNfZW5hYmxlZAiADgAAAGlzX3F1YXJhbnRpbmVkCgkyMDAwMDAw
+OTgGAAAAc2lnX2lkFgAAAHBhcmFtX25lZ3NpZ19vdmVycmlkZXMJAAAAcGFyYW1ldGVy
+</element>
+      <matched_wildcard_element></matched_wildcard_element>
+      <description>Add XSS script tag (Parameter) (disabled on the parameter) to Overridden Attack Signatures.</description>
+      <occurrence_count>1</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>false</is_read>
+      <first_occurrence_time>1526388070</first_occurrence_time>
+      <last_occurrence_time>1526388070</last_occurrence_time>
+      <average_violation_rating>3</average_violation_rating>
+      <is_automatically_learnable>true</is_automatically_learnable>
+      <suggestion_reason>violation_mitigation</suggestion_reason>
+      <element_type>PARAMETER</element_type>
+      <element_kind>tm:asm:policies:parameters:parameterstate</element_kind>
+      <element_id>N_a3D1S7OKDehYEPb-mgCg</element_id>
+      <sig_id>200000098</sig_id>
+      <section>Parameters</section>
+    </suggestion>
+    <suggestion key="parameter:r2:3389dae361af79b04c9c8e7057f60cc6:r2:psignature:200001088">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>update_append</suggestion_action>
+      <violation>ATTACK_SIGNATURE_DETECTED</violation>
+      <element_name>*</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MIigwAAABlbGVtZW50X3R5cGUEERhGNTo6QVNN
+Q29uZmlnOjpQYXJhbWV0ZXIDBQAAAAoJUGFyYW1ldGVyDQAAAF9fc2hvcnRfY2xhc3MIgQsAAABp
+c193aWxkY2FyZAiBCwAAAHBhcmFtX2xldmVsCgEqCgAAAHBhcmFtX25hbWUEAgEAAAAEESBGNTo6
+QVNNQ29uZmlnOjpTaWduYXR1cmVPdmVycmlkZQMEAAAAChFTaWduYXR1cmVPdmVycmlkZQ0AAABf
+X3Nob3J0X2NsYXNzCIAKAAAAaXNfZW5hYmxlZAiADgAAAGlzX3F1YXJhbnRpbmVkCgkyMDAwMDEw
+ODgGAAAAc2lnX2lkFgAAAHBhcmFtX25lZ3NpZ19vdmVycmlkZXMJAAAAcGFyYW1ldGVy
+</element>
+      <matched_wildcard_element></matched_wildcard_element>
+      <description>Add alert() (Parameter) (disabled on the parameter) to Overridden Attack Signatures.</description>
+      <occurrence_count>1</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>false</is_read>
+      <first_occurrence_time>1526388070</first_occurrence_time>
+      <last_occurrence_time>1526388070</last_occurrence_time>
+      <average_violation_rating>3</average_violation_rating>
+      <is_automatically_learnable>true</is_automatically_learnable>
+      <suggestion_reason>violation_mitigation</suggestion_reason>
+      <element_type>PARAMETER</element_type>
+      <element_kind>tm:asm:policies:parameters:parameterstate</element_kind>
+      <element_id>N_a3D1S7OKDehYEPb-mgCg</element_id>
+      <sig_id>200001088</sig_id>
+      <section>Parameters</section>
+    </suggestion>
+    <suggestion key="parameter:r2:3389dae361af79b04c9c8e7057f60cc6:r2:psignature:200001475">
+      <suggestion_score>5</suggestion_score>
+      <suggestion_status>ignored</suggestion_status>
+      <suggestion_action>update_append</suggestion_action>
+      <violation>ATTACK_SIGNATURE_DETECTED</violation>
+      <element_name>*</element_name>
+      <element>BAkEMTIzNAQEBAgRIEY1OjpBU01Db25maWc6OlN1Z2dlc3Rpb25FbGVtZW50AwMAAAAKEVN1Z2dl
+c3Rpb25FbGVtZW50DQAAAF9fc2hvcnRfY2xhc3MIigwAAABlbGVtZW50X3R5cGUEERhGNTo6QVNN
+Q29uZmlnOjpQYXJhbWV0ZXIDBQAAAAoJUGFyYW1ldGVyDQAAAF9fc2hvcnRfY2xhc3MIgQsAAABp
+c193aWxkY2FyZAiBCwAAAHBhcmFtX2xldmVsCgEqCgAAAHBhcmFtX25hbWUEAgEAAAAEESBGNTo6
+QVNNQ29uZmlnOjpTaWduYXR1cmVPdmVycmlkZQMEAAAAChFTaWduYXR1cmVPdmVycmlkZQ0AAABf
+X3Nob3J0X2NsYXNzCIAKAAAAaXNfZW5hYmxlZAiADgAAAGlzX3F1YXJhbnRpbmVkCgkyMDAwMDE0
+NzUGAAAAc2lnX2lkFgAAAHBhcmFtX25lZ3NpZ19vdmVycmlkZXMJAAAAcGFyYW1ldGVy
+</element>
+      <matched_wildcard_element></matched_wildcard_element>
+      <description>Add XSS script tag end (Parameter) (2) (disabled on the parameter) to Overridden Attack Signatures.</description>
+      <occurrence_count>1</occurrence_count>
+      <trusted_sources_count>0</trusted_sources_count>
+      <untrusted_sources_count>1</untrusted_sources_count>
+      <user_comment></user_comment>
+      <is_read>true</is_read>
+      <first_occurrence_time>1526388070</first_occurrence_time>
+      <last_occurrence_time>1526388070</last_occurrence_time>
+      <average_violation_rating>3</average_violation_rating>
+      <is_automatically_learnable>true</is_automatically_learnable>
+      <suggestion_reason>violation_mitigation</suggestion_reason>
+      <element_type>PARAMETER</element_type>
+      <element_kind>tm:asm:policies:parameters:parameterstate</element_kind>
+      <element_id>N_a3D1S7OKDehYEPb-mgCg</element_id>
+      <sig_id>200001475</sig_id>
+      <section>Parameters</section>
     </suggestion>
   </suggestions>
   <server_technologies>
