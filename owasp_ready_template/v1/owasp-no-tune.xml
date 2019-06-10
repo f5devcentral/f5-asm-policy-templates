@@ -4,7 +4,7 @@
   <policy_version>
   </policy_version>
   <encoding>utf-8</encoding>
-  <description>owasp no-autotune-v13-v1.0 template that include owasp protection settings and enable policy builder auto learning and applying to the security policy</description>
+  <description>owasp no-tune-v1.1 template that include minimum owasp protection settings, disable policy builder auto learning and auto applying</description>
   <case_insensitive>true</case_insensitive>
   <owa>false</owa>
   <protocol_free>true</protocol_free>
