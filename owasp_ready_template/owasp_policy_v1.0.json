@@ -1,0 +1,120 @@
+{
+  "policy": {
+    "name": "Complete_OWASP_Top_Ten",
+    "description": "A generic, OWASP Top 10 protection items v1.0",
+    "template": {
+      "name": "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
+    },
+    "fullPath": "/Common/Complete_OWASP_Top_Ten",
+    "enforcementMode":"transparent",
+    "signature-settings":{
+           "signatureStaging": false,
+           "minimumAccuracyForAutoAddedSignatures": "high"
+       },
+    "protocolIndependent": true,
+    "caseInsensitive": true,
+    "general": {
+      "trustXff": true
+    },
+    "data-guard": {
+      "enabled": true
+    },
+    "policy-builder-server-technologies": {
+        "enableServerTechnologiesDetection": true
+    },
+    "blocking-settings": {
+      "violations": [
+        {
+          "alarm": true,
+          "block": true,
+          "description": "ASM Cookie Hijacking",
+          "learn": false,
+          "name": "VIOL_ASM_COOKIE_HIJACKING"
+        },
+        {
+          "alarm": true,
+          "block": true,
+          "description": "Access from disallowed User/Session/IP/Device ID",
+          "name": "VIOL_SESSION_AWARENESS"
+        },
+        {
+          "alarm": true,
+          "block": true,
+          "description": "Modified ASM cookie",
+          "learn": true,
+          "name": "VIOL_ASM_COOKIE_MODIFIED"
+        },
+        {
+          "alarm": true,
+          "block": true,
+          "description": "XML data does not comply with format settings",
+          "learn": true,
+          "name": "VIOL_XML_FORMAT"
+        },
+        {
+          "name": "VIOL_FILETYPE",
+          "alarm": true,
+          "block": true,
+          "learn": true
+        }
+      ],
+      "evasions": [
+        {
+          "description": "Bad unescape",
+          "enabled": true,
+          "learn": true
+        },
+        {
+          "description": "Apache whitespace",
+          "enabled": true,
+          "learn": true
+        },
+        {
+          "description": "Bare byte decoding",
+          "enabled": true,
+          "learn": true
+        },
+        {
+          "description": "IIS Unicode codepoints",
+          "enabled": true,
+          "learn": true
+        },
+        {
+          "description": "IIS backslashes",
+          "enabled": true,
+          "learn": true
+        },
+        {
+          "description": "%u decoding",
+          "enabled": true,
+          "learn": true
+        },
+        {
+          "description": "Multiple decoding",
+          "enabled": true,
+          "learn": true,
+          "maxDecodingPasses": 3
+        },
+        {
+          "description": "Directory traversals",
+          "enabled": true,
+          "learn": true
+        }
+      ]
+    },
+    "xml-profiles": [
+      {
+        "name": "Default",
+        "defenseAttributes": {
+          "allowDTDs": false,
+          "allowExternalReferences": false
+        }
+      }
+    ],
+    "session-tracking": {
+      "sessionTrackingConfiguration": {
+        "enableTrackingSessionHijackingByDeviceId": true
+      }
+    }
+  }
+}
