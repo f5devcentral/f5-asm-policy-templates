@@ -3,12 +3,12 @@
   <type>Security</type>
   <policy_version>
     <timestamp>2019-10-28T07:31:03Z</timestamp>
-    <device_name>/Common/Outlook_Web_Access_2016_Ready_Template_v6.1.6</device_name>
+    <device_name>/Common/s4hana</device_name>
     <policy_name>/Common/s4hana</policy_name>
     <last_change></last_change>
   </policy_version>
   <encoding>utf-8</encoding>
-  <description>Outlook Web Access 2016 Ready Template 6.1.2 version 13.1 please check out the latest please check out our latest version at: https://github.com/f5devcentral/f5-asm-policy-template-v13/tree/master/application_ready_template_v13</description>
+  <description>Application Ready Template v6.1.6 for SAP Fiori</description>
   <case_insensitive>false</case_insensitive>
   <owa>false</owa>
   <protocol_free>true</protocol_free>
